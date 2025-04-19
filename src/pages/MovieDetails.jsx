@@ -60,7 +60,7 @@ const MovieDetails = () => {
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/100  via-black/70 to-black/5"></div>
-            <div className='relative z-{100} flex gap-[30px] max-w-[70%] mx-auto flex-wrap'>
+            <div className='relative sm:top-[200px] top-[400px] flex gap-[30px] max-w-[70%] mx-auto flex-wrap'>
               <div>
                 <img src={mvDtls?.backdrop_path
                   ? `https://image.tmdb.org/t/p/w1280${mvDtls.backdrop_path}`
@@ -71,7 +71,7 @@ const MovieDetails = () => {
               <div className='sm:max-w-[90%] md:max-w-[50%]'>
                 <h1 className=" text-4xl font-bold text-white mb-[20px] relative before:content-[''] before:absolute before:left-0 before:bottom-[-10px] before:w-[70px] before:h-[5px] before:bg-red-500 ">{mvDtls?.title}</h1>
                 <p className="text-lg text-white max-w-[100%] relative before:content-[''] before:absolute before:left-0 before:bottom-[-10px] before:w-[100%] before:h-[1px] before:bg-red-700 ">{mvDtls?.overview}</p>
-                {genres.length>0 &&
+                {genres.length > 0 &&
                   <div className='my-10'>
                     <span className='text-2xl text-white font-semibold block mb-4'>Genres:</span>
                     <div className='flex flex-wrap gap-4'>

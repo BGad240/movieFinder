@@ -92,28 +92,28 @@ const Home = () => {
               <h1 className='text-white mb-[30px] text-[30px] border-b-[5px] w-fit border-red-600'>
                 <span className='text-[60px] text-red-600 ml-[20px]'>P</span>opular Movies
               </h1>
-              <MoviesSlider mv={movies} />
+              <MoviesSlider mv={movies} show="movie" />
             </div>
 
             <div className='my-[120px]'>
               <h1 className='text-white mb-[30px] text-[30px] border-b-[5px] w-fit border-red-600'>
                 <span className='text-[60px] text-red-600 ml-[20px]'>N</span>ow Playing Movies
               </h1>
-              <MoviesSlider mv={nowPlayingValue} />
+              <MoviesSlider mv={nowPlayingValue} show="movie" />
             </div>
 
             <div className='my-[120px]'>
               <h1 className='text-white mb-[30px] text-[30px] border-b-[5px] w-fit border-red-600'>
                 <span className='text-[60px] text-red-600 ml-[20px]'>T</span>rending Movies
               </h1>
-              <MoviesSlider mv={trendingValue} />
+              <MoviesSlider mv={trendingValue} show="movie" />
             </div>
 
             <div className='my-[120px]'>
               <h1 className='text-white mb-[30px] text-[30px] border-b-[5px] w-fit border-red-600'>
                 <span className='text-[60px] text-red-600 ml-[20px]'>P</span>opular Tv Shows
               </h1>
-              <MoviesSlider mv={tvPopValue} />
+              <MoviesSlider mv={tvPopValue} show="show" />
             </div>
           </>
         )
