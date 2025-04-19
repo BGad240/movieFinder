@@ -60,7 +60,7 @@ const MovieDetails = () => {
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/100  via-black/70 to-black/5"></div>
-            <div className='relative sm:top-[200px] top-[400px] flex gap-[30px] max-w-[70%] mx-auto flex-wrap'>
+            <div className='relative z-[100] mb-[220px] sm:top-[200px] top-[400px] flex gap-[30px] max-w-[70%] mx-auto flex-wrap'>
               <div>
                 <img src={mvDtls?.backdrop_path
                   ? `https://image.tmdb.org/t/p/w1280${mvDtls.backdrop_path}`
