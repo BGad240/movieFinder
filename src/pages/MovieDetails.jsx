@@ -39,7 +39,7 @@ const MovieDetails = () => {
 
 
   return (
-    <div>
+    <div className='relative z-[-10]'>
       {
         loading ? (<div className="loader w-[100%] h-screen bg-black flex items-center justify-center">
           <BounceLoader color="#ff5733" size={100} />;
@@ -60,8 +60,8 @@ const MovieDetails = () => {
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/100  via-black/70 to-black/5"></div>
-            <div className='relative z-[100] mb-[220px] sm:top-[200px] top-[400px] flex gap-[30px] max-w-[70%] mx-auto flex-wrap'>
-              <div>
+            <div className='relative z-[100] mb-[300px] top-[100px] flex gap-[30px] max-w-[70%] mx-auto flex-wrap'>
+              <div className='hidden sm:block'>
                 <img src={mvDtls?.backdrop_path
                   ? `https://image.tmdb.org/t/p/w1280${mvDtls.backdrop_path}`
                   : "https://via.placeholder.com/500x300?text=No+Image"}

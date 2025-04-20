@@ -34,7 +34,7 @@ const ShowDetails = () => {
 
 
     return (
-        <div>
+        <div className='mb-[100px]'>
             {
                 loading ? (<div className="loader w-[100%] h-screen bg-black flex items-center justify-center">
                     <BounceLoader color="#ff5733" size={100} />;
@@ -55,7 +55,7 @@ const ShowDetails = () => {
 
                         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10"></div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/100  via-black/70 to-black/5"></div>
-                            <div className='relative sm:top-[0px] top-[100px] flex gap-[30px] max-w-[70%] mx-auto flex-wrap'>
+                        <div className='relative  sm:top-[0px] top-[100px] flex gap-[30px] max-w-[70%] mx-auto flex-wrap'>
 
                             <div>
                                 <img src={showDtls?.backdrop_path

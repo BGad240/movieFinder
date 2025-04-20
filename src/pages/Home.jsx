@@ -7,6 +7,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { MoviesContext } from "../context/MoviesProvider";
 import { useContext } from "react";
 import { BounceLoader } from "react-spinners";
+import { Link } from 'react-router-dom';
 const Home = () => {
   const [movies, setMovies] = useState([])
   const { nowPlayingValue, popularValue, trendingValue, tvPopValue } = useContext(MoviesContext)
@@ -69,7 +70,9 @@ const Home = () => {
                           {movie.overview.slice(0, 140)}
                         </p>
                         <div className='flex mt-[40px]'>
-                          <button className='w-[160px] h-[40px] bg-red-700 hover:bg-red-600 translate-colors rounded-lg'>show details</button>
+                          <button className='w-[160px] h-[40px] bg-red-700 hover:bg-red-600 translate-colors rounded-lg'>
+                            <Link to={`/movie/${movie.id}`}>show details</Link>
+                          </button>
                           <button></button>
                         </div>
                       </div>

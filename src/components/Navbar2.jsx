@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { MenuIcon, X } from 'lucide-react'
@@ -7,6 +7,7 @@ const Navbar = () => {
     const location = useLocation()
     const pathName = location.pathname
     const [isOpen, setIsOpen] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
 
     const navLinks = [
         { name: "Home", path: "/" },
@@ -15,12 +16,25 @@ const Navbar = () => {
         { name: "Search", path: "/search" },
     ]
 
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true)
+            } else {
+                setScrolled(false)
+            }
+        }
+        window.addEventListener("scroll", handleScroll)
+    }, [])
+
+
     return (
         <motion.nav
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 80 }}
-            className="fixed top-0 left-0 w-full z-50 bg-black text-white shadow-md"
+            className={`fixed top-0 left-0 w-full z-[1000] bg-black text-white transition-all duration-300 ${scrolled || isOpen ? 'bg-black shadow-md' : 'bg-transparent'}`}
         >
             <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
                 <motion.div
@@ -29,7 +43,10 @@ const Navbar = () => {
                     transition={{ delay: 0.2 }}
                     className="text-2xl font-extrabold text-red-500"
                 >
-                    TvTender
+                    <Link to="/">
+                        TvTender
+                    </Link>
+
                 </motion.div>
 
                 <div className="hidden md:flex gap-6 items-center">
